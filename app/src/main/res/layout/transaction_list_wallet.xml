@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,144 +8,49 @@
     android:layout_marginEnd="16dp"
     android:layout_marginBottom="16dp"
     app:cardCornerRadius="8dp"
-    app:cardElevation="8dp">
+    app:cardElevation="8dp"
+    >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/ivSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/income_trx" />
 
+    <TextView
+        android:id="@+id/tvSalary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Salary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toEndOf="@+id/ivSalary"
+        app:layout_constraintTop_toTopOf="@+id/ivSalary" />
 
+    <TextView
+        android:id="@+id/tvSalaryAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="KES 40000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toEndOf="@+id/ivSalary"
+        app:layout_constraintTop_toBottomOf="@+id/tvSalary" />
 
-        <ImageView
-            android:id="@+id/ivMoneyIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/income" />
-
-        <TextView
-            android:id="@+id/tvMoneyIn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MONEY IN"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.075"
-            app:layout_constraintStart_toEndOf="@+id/ivMoneyIn"
-            app:layout_constraintTop_toTopOf="@+id/ivMoneyIn" />
-
-        <TextView
-            android:id="@+id/tvMoneyInAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="KES 42400"
-            app:layout_constraintStart_toEndOf="@+id/ivMoneyIn"
-            app:layout_constraintTop_toBottomOf="@+id/tvMoneyIn" />
-
-        <ImageView
-            android:id="@+id/ivMoneyOut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivMoneyIn"
-            app:layout_constraintTop_toTopOf="@+id/ivMoneyIn"
-            app:srcCompat="@drawable/expense" />
-
-        <TextView
-            android:id="@+id/tvMoneyOut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MONEY OUT"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.877"
-            app:layout_constraintStart_toEndOf="@+id/tvMoneyIn"
-            app:layout_constraintTop_toTopOf="@+id/tvMoneyIn" />
-
-        <TextView
-            android:id="@+id/tvMoneyOutAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="KES 23700"
-            app:layout_constraintStart_toEndOf="@+id/ivMoneyOut"
-            app:layout_constraintTop_toBottomOf="@+id/tvMoneyOut" />
-
-        <ImageView
-            android:id="@+id/ivBalance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivMoneyIn"
-            app:srcCompat="@drawable/balance" />
-
-        <TextView
-            android:id="@+id/tvBalance"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BALANCE"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.084"
-            app:layout_constraintStart_toEndOf="@+id/ivBalance"
-            app:layout_constraintTop_toTopOf="@+id/ivBalance" />
-
-        <TextView
-            android:id="@+id/tvBalanceAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="KES 18700"
-            app:layout_constraintStart_toEndOf="@+id/ivBalance"
-            app:layout_constraintTop_toBottomOf="@+id/tvBalance" />
-
-        <ImageView
-            android:id="@+id/ivTransactions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/ivBalance"
-            app:layout_constraintTop_toTopOf="@+id/ivBalance"
-            app:srcCompat="@drawable/transactions" />
-
-        <TextView
-            android:id="@+id/tvTransactions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TRANSACTIONS"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.943"
-            app:layout_constraintStart_toEndOf="@+id/tvBalance"
-            app:layout_constraintTop_toTopOf="@+id/tvBalance" />
-
-        <TextView
-            android:id="@+id/tvTransactionsAmount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="8"
-            app:layout_constraintStart_toEndOf="@+id/ivTransactions"
-            app:layout_constraintTop_toBottomOf="@+id/tvTransactions" />
-
-        <include
-            layout="@layout/commerce_list_wallet"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="24dp"
-            android:padding="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvTransactionsAmount" />
+    <TextView
+        android:id="@+id/tvSalaryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:text="1 Jul 2024"
+        app:layout_constraintStart_toEndOf="@+id/tvSalaryAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvSalaryAmount" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
