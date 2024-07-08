@@ -3,7 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -56,7 +61,7 @@
             android:layout_height="wrap_content"
             android:text="MONEY OUT"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.767"
+            app:layout_constraintHorizontal_bias="0.877"
             app:layout_constraintStart_toEndOf="@+id/tvMoneyIn"
             app:layout_constraintTop_toTopOf="@+id/tvMoneyIn" />
 
@@ -115,7 +120,7 @@
             android:layout_height="wrap_content"
             android:text="TRANSACTIONS"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.88"
+            app:layout_constraintHorizontal_bias="0.943"
             app:layout_constraintStart_toEndOf="@+id/tvBalance"
             app:layout_constraintTop_toTopOf="@+id/tvBalance" />
 
@@ -129,6 +134,17 @@
             app:layout_constraintStart_toEndOf="@+id/ivTransactions"
             app:layout_constraintTop_toBottomOf="@+id/tvTransactions" />
 
+        <include
+            layout="@layout/commerce_list_wallet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTransactionsAmount" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
