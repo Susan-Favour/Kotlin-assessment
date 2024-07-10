@@ -19,7 +19,6 @@ class TransactionsAdapter(var expensesList: List<Wallet>):
         holder.tvSalary.text = expense.text
         holder.tvSalaryAmount.text = expense.amount
         holder.tvSalaryDate.text = expense.date
-        holder.ivSalary.text = expense.image
 
     }
 
@@ -32,5 +31,4 @@ class TransactionsAdapterHolder(itemView: View):RecyclerView.ViewHolder(itemView
     val tvSalary = itemView.findViewById<TextView>(R.id.tvSalary)
     val tvSalaryAmount = itemView.findViewById<TextView>(R.id.tvSalaryAmount)
     val tvSalaryDate = itemView.findViewById<TextView>(R.id.tvSalaryDate)
-    val ivSalary = itemView.findViewById<TextView>(R.id.ivSalary)
 }
